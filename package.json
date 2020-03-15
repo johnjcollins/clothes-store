@@ -1,0 +1,20 @@
+{
+  "name": "clothes-store",
+  "version": "1.0.0",
+  "description": "Clothes store website using CCS grid and SASS",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass scss/main.scss css/main.css -w"
+  },
+  "keywords": [
+    "clothes",
+    "store",
+    "grid",
+    "sass"
+  ],
+  "author": "John Collins",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
