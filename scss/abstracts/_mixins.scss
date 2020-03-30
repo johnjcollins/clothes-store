@@ -2,3 +2,9 @@
   color: color(primary);
   text-decoration: none;
 }
+
+@mixin flex-position($just-cont: center, $align-itm: center) {
+  display: flex;
+  justify-content: $just-cont;
+  align-items: $align-itm;
+}

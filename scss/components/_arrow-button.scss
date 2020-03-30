@@ -1,0 +1,72 @@
+.arrow-button {
+  @include flex-position;
+
+  &__link {
+    width: 16rem;
+    height: 4rem;
+    text-decoration: none;
+    position: relative;
+    @include flex-position(space-around);
+  }
+
+  &:hover &__bg {
+    width: 18rem;
+  }
+
+  &:hover &__text {
+    color: color(secondary);
+  }
+
+  &:hover &__arrow {
+    transform: translateX(1rem);
+  }
+
+  &:hover &__line--1 {
+    width: 2rem;
+  }
+
+  &__bg {
+    width: 4rem;
+    height: 4rem;
+    background-color: color(primary);
+    border-radius: 5rem;
+    position: absolute;
+    left: 0;
+    transition: width 0.2s;
+  }
+
+  &__text {
+    font-size: size(xs);
+    text-transform: uppercase;
+    color: color(primary);
+    z-index: 10;
+  }
+
+  &__arrow {
+    @include flex-position;
+    transition: transform 0.2s;
+  }
+
+  &__line {
+    height: 0.2rem;
+    background-color: color(secondary);
+    position: absolute;
+    transform-origin: right;
+  }
+
+  &__line--1 {
+    width: 0;
+    transform: translateX(-0.7rem);
+    transition: width 0.2s;
+  }
+
+  &__line--2 {
+    width: 1rem;
+    transform: rotateZ(45deg);
+  }
+
+  &__line--3 {
+    width: 1rem;
+    transform: rotateZ(-45deg);
+  }
+}
